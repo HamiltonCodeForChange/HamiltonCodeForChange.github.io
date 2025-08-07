@@ -10,6 +10,7 @@ body {
     background-color: #ffffff;
     color: #1a1a1a;
     line-height: 1.6;
+	
 }
 
 /* Color Palette */
@@ -24,6 +25,9 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+	opacity: 0;
+  transform: translateY(50px); /* Start with the text below its final position */
+  animation: slideIn 2s ease-in-out forwards;
 }
 
 /* Header */
@@ -49,6 +53,7 @@ header h1 {
     font-size: 1.8rem;
     margin-left: 1rem;
     flex-grow: 1;
+	
 }
 
 nav ul {
@@ -79,11 +84,17 @@ nav a:hover {
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+	opacity: 0;
+  transform: translateY(50px); /* Start with the text below its final position */
+  animation: slideIn 2s ease-in-out forwards;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+	opacity: 0;
+  transform: translateY(50px); /* Start with the text below its final position */
+  animation: slideIn 2s ease-in-out forwards;
 }
 
 .btn {
@@ -152,6 +163,17 @@ nav a:hover {
 .signup-container .btn:hover {
     background-color: var(--dark-blue);
     color: var(--white);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Initially below the screen */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move text into place */
+  }
 }
 
 
